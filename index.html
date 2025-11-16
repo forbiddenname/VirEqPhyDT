@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArrangeBot: LLM-Guided Scene Graph Diffusion</title>
+    <title>Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -148,16 +148,17 @@
     <!-- <section class="hero-banner text-center">
         <div class="container position-relative" style="z-index: 1;">
             <h1 class="display-4 fw-bold mb-3">ArrangeBot</h1>
-            <p class="lead mb-4">LLM-Guided Scene Graph-Conditioned Diffusion for Structured Robotic Tabletop Arrangement</p>
+            <p class="lead mb-4">Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</p>
 
             <div class="author-list mb-4">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <span>Zhipeng Wang<sup>1</sup></span>
-                    <span>Yubao Liu<sup>1</sup></span>
+                    <span>Xin Li<sup>1</sup></span>
+                    <span>Shiyuan Zhang<sup>1</sup></span>
+                    <span>Yanmin Zhou<sup>1,*</sup></span>
+                    <span>Ping Lu<sup>1,*</sup></span>
+                    <span>Zhipeng Wang<sup>1,*</sup></span>
                     <span>Jiang Rong<sup>1</sup></span>
-                    <span>Hongrui Sang<sup>1</sup></span>
-                    <span>Yanmin Zhou<sup>1</sup></span>
-                    <span>Li Xin<sup>1,*</sup></span>
+                    <span>Hongrui Sang<sup>1</sup></span>                
                     <span>He Bin<sup>1</sup></span>
                 </div>
                 <div class="affiliation mt-2">
@@ -208,23 +209,24 @@
         <section class="hero-banner text-center">
             <div class="container position-relative" style="z-index: 1;">
                 <!-- 强化主标题 -->
-                <h1 class="display-2 fw-bold mb-4">ArrangeBot</h1>
-                <p class="lead mb-4 fs-3">LLM-Guided Scene Graph-Conditioned Diffusion for Structured Robotic Tabletop Arrangement</p>
+                <h1 class="display-2 fw-bold mb-4">VirEqPhyDT</h1>
+                <p class="lead mb-4 fs-3">Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</p>
         
                 <!-- 层级化作者信息 -->
                 <div class="author-list mb-5">
-                    <div class="d-flex flex-wrap justify-content-center gap-4">  <!-- 增加间距 -->
-                        <span>Zhipeng Wang<sup>1</sup></span>
-                        <span>Yubao Liu<sup>1</sup></span>
+                    <div class="d-flex flex-wrap justify-content-center gap-4">  <!-- 增加间距 -->       
+                        <span>Xin Li<sup>1</sup></span>
+                        <span>Shiyuan Zhang<sup>1</sup></span>
+                        <span>Yanmin Zhou<sup>1,*</sup></span>
+                        <span>Ping Lu<sup>1,*</sup></span>
+                        <span>Zhipeng Wang<sup>1,*</sup></span>
                         <span>Jiang Rong<sup>1</sup></span>
-                        <span>Hongrui Sang<sup>1</sup></span>
-                        <span >Yanmin Zhou<sup>1</sup></span>
-                        <span class="text-warning">Li Xin<sup>1,*</sup></span>
+                        <span>Hongrui Sang<sup>1</sup></span>                
                         <span>He Bin<sup>1</sup></span>
                     </div>
                     <div class="affiliation mt-3 fs-5">  <!-- 机构信息放大 -->
                         <sup>1</sup>Tongji University &nbsp;|&nbsp; 
-                        <sup>*</sup>Corresponding Author: lixin314@foxmail.com
+                        <sup>*</sup>Corresponding Author: 
                     </div>
                 </div>
                 
@@ -243,30 +245,29 @@
             <div class="abstract-container mb-5">
                 <h2 class="display-5 mb-4 border-bottom pb-3">Abstract</h2>
                 <div class="fs-5 lh-base" style="column-count: 1; column-gap: 2rem">
-                    Enabling robots to arrange items on a table in a
-                    manner consistent with human-like common sense has consis-
-                    tently been a focal point of in-depth exploration for researchers
-                    in the field of robotics. To achieve this goal, robots need to
-                    understand the semantic configurations and abstract relation-
-                    ships between interactive objects and transfer the learned prior
-                    knowledge into the arrangement strategies for tabletop objects.
-                    In this study, we introduce a method called ArrangeBot, which
-                    is an innovative framework for tabletop object arrangement.
-                    This framework integrates a large language model with a scene
-                    graph-based diffusion denoising model, where the large language
-                    model is responsible for abstracting a scene graph that aligns
-                    with common sense, while the diffusion model generates the
-                    required fine-grained arrangement information based on a rough
-                    scene graph description. Specifically, we introduce a diffusion
-                    sharing mechanism for scene graph nodes to ensure the capture
-                    of spatial relationships between object nodes. Quantitative and
-                    qualitative experimental results demonstrate that ArrangeBot
-                    not only achieves superior performance in object arrangement
-                    accuracy but also exhibits significant advantages over existing
-                    methods in terms of physical spatial rationality and aesthetic
-                    considerations. Furthermore, the proposed framework has been
-                    validated through real-world robotic experiments, proving its
-                    effectiveness in executing tabletop arrangement tasks
+                   <p>
+                     Digital Twin (DT) technology, which enables real-time spatiotemporal mapping of physical objects, 
+                     offers a promising way to provide embodied agents with dynamic, reality-mirrored virtual learning environment. 
+                     However, most existing agent-DT systems either rely on heavy 3D point-cloud 
+                     reconstruction or on loosely coupled geometric-parameter synchronization, 
+                     making it difficult to efficiently maintain geometric dynamic equivalence between complex indoor scenes 
+                     and their virtual counterparts. 
+                   </p>
+                   <p>
+                     This paper introduces VirEqPhy, a geometric dynamic equivalence method that formulates virtual-physical 
+                     consistency as a voxel-based multi-task cascade that jointly perform CAD model retrieval and 9-DoF pose estimation from 
+                     a single RGB image. VirEqPhy embeds observed objects and CAD models into a shared voxel feature space, couples 
+                     a two-stage rotation estimation scheme with Procrustes-based refinement, and optionally integrates a weakly 
+                     supervised Top-k retrieval module that learns object-CAD associations from multi-similarity labels 
+                     without dense manual correspondences. 
+                   </p>
+                   <p>
+                     In the supervised setting, VirEqPhy achieves 24.2% high-threshold mean AP for model retrieval and 24.4% 
+                     class-level alignment accuracy under the Scan2CAD criterion. In the weakly supervised setting, VirEqPhy 
+                     achieves 29.2% high-threshold mean AP and maintains strong performance on unseen categories. 
+                     In both settings, it surpasses representative baselines. A real-robot indoor navigation experiment further 
+                     verifies its effectiveness in dynamic real-world environments.
+                   </p>
                 </div>
             </div>
     
