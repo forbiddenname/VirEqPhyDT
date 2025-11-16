@@ -139,7 +139,13 @@
                 padding: 2rem 0;
             }
         }
-
+    .framework-img {
+        max-width: 100%;     
+        height: auto;        
+        max-height: 80vh;    
+        object-fit: contain; 
+        cursor: zoom-in;     
+    }
     
     </style>
 </head>
@@ -275,16 +281,26 @@
     
             <!-- 示意图展示区 -->
           
-            <div class="illustration-container bg-light rounded-4 p-4 shadow-lg">
-                <!-- 响应式滚动容器 -->
-                <div class="scrollable-illustration">
-                    <img src="intr.jpg" 
-                         alt="VirEqPhyDT Framework" 
-                         class="img-fluid w-auto d-block mx-auto"
-                         style="min-width: 1200px; transform: translateZ(0)"
-                         loading="lazy">
-                </div>
+    <div class="illustration-container bg-light rounded-4 p-4 shadow-lg mt-4">
+        <div class="text-center">
+            <a href="intr.jpg" target="_blank">
+                <img src="intr.jpg"
+                     alt="VirEqPhyDT Framework"
+                     class="framework-img"
+                     loading="lazy">
+            </a>
+
+            <!-- 图标题：Fig. 1 -->
+            <div class="fw-bold mt-3" style="font-size: 1.05rem;">
+                Fig. 1 VirEqPhyDT Framework
             </div>
+
+            <!-- 点击查看原图提示 -->
+            <div class="text-muted small mt-1">
+                Click to view full-size image
+            </div>
+        </div>
+    </div>
 
             
     
