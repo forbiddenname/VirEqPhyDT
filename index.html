@@ -339,25 +339,26 @@
     <div class="container">
         <h2 class="text-center fw-bold mb-5">Performance of Virtual Scene Updating</h2>
         <div class="row justify-content-center">
-            <div class="col-12 col-xl-10 col-xxl-9">  <!-- 增加列宽层级 -->
+            <div class="col-12 col-xl-10 col-xxl-9">
+                
                 <!-- 导航选项卡 -->
                 <div class="nav-tabs-wrapper">
                     <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" data-bs-toggle="tab" 
-                                    data-bs-target="#quantitative" type="button">
+                                    data-bs-target="#quantitative" type="button" role="tab">
                                 Quantitative Comparison
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" data-bs-toggle="tab" 
-                                    data-bs-target="#qualitative" type="button">
+                                    data-bs-target="#qualitative" type="button" role="tab">
                                 Qualitative comparison
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" data-bs-toggle="tab" 
-                                    data-bs-target="#ablation" type="button">
+                                    data-bs-target="#ablation" type="button" role="tab">
                                 Ablation Results
                             </button>
                         </li>
@@ -367,19 +368,23 @@
                 <!-- 内容面板 -->
                 <div class="tab-content">
                     <!-- Quantitative Comparison 面板 -->
-                    <div class="tab-pane fade show active" id="quantitative">
+                    <div class="tab-pane fade show active" id="quantitative" role="tabpanel">
                         <div class="card border-0 shadow">
-                            <img src="A1.png" class="card-img-top" alt="Quantitative Comparison">
+                            <img src="A1.png" 
+                                 class="card-img-top clickable-image" 
+                                 data-full="A1.png"
+                                 alt="Quantitative Comparison">
                             <div class="card-body">
                                 <p class="card-text">
                                     Retrieval-Aware Alignment Accuracy (%) and inference time (per image) on Scan2CAD-based dataset
                                 </p>
+                                <p class="text-muted small mb-0">Click to view full-size image</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Qualitative comparison 面板 -->
-                    <div class="tab-pane fade" id="qualitative">
+                    <div class="tab-pane fade" id="qualitative" role="tabpanel">
                         <div class="card border-0 shadow">
                             <div class="card-body">
                                 <!-- 双图布局 -->
@@ -387,21 +392,25 @@
                                     <div class="col-md-6">
                                         <div class="img-container border rounded p-2">
                                             <img src="A2_1.png" 
-                                                 class="img-fluid rounded" 
-                                                 alt="Prompt Engineering">
+                                                 class="img-fluid rounded clickable-image" 
+                                                 data-full="A2_1.png"
+                                                 alt="Qualitative results 1">
                                             <div class="caption text-muted mt-2 small">
                                                 Qualitative results in scenarios with single and multiple objects
                                             </div>
+                                            <div class="text-muted small">Click to view full-size image</div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="img-container border rounded p-2">
                                             <img src="A2_2.png" 
-                                                 class="img-fluid rounded" 
-                                                 alt="Parsing Process">
+                                                 class="img-fluid rounded clickable-image" 
+                                                 data-full="A2_2.png"
+                                                 alt="Qualitative results 2">
                                             <div class="caption text-muted mt-2 small">
                                                 Qualitative results in scenarios with partially occluded objects
                                             </div>
+                                            <div class="text-muted small">Click to view full-size image</div>
                                         </div>
                                     </div>
                                 </div>
@@ -411,13 +420,17 @@
                     </div>
 
                     <!-- Ablation Results 面板 -->   
-                    <div class="tab-pane fade" id="ablation">
+                    <div class="tab-pane fade" id="ablation" role="tabpanel">
                         <div class="card border-0 shadow">
-                            <img src="A3.png" class="card-img-top" alt="Diffusion Process">
+                            <img src="A3.png" 
+                                 class="card-img-top clickable-image" 
+                                 data-full="A3.png"
+                                 alt="Ablation Results">
                             <div class="card-body">
                                 <p class="card-text">
                                     Retrieval-Aware Alignment Accuracy (%) for various ablations. The underline value indicates the optimal result
                                 </p>
+                                <p class="text-muted small mb-0">Click to view full-size image</p>
                             </div>
                         </div>
                     </div>     
@@ -427,6 +440,43 @@
         </div>
     </div>
 </section>
+
+<!-- 公用图片 Modal（放 body 里一次即可） -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content bg-dark">
+      <div class="modal-body p-0">
+        <img id="imageModalImg" src="" class="img-fluid w-100" alt="Full-size image">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 简单样式 + JS，可放在页面底部（确保在引入 bootstrap.bundle.js 之后执行） -->
+<style>
+.clickable-image {
+    cursor: zoom-in;
+    transition: 0.2s;
+}
+.clickable-image:hover {
+    filter: brightness(0.85);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".clickable-image").forEach(function (img) {
+        img.addEventListener("click", function () {
+            const fullUrl = this.getAttribute("data-full");
+            const modalImg = document.getElementById("imageModalImg");
+            modalImg.src = fullUrl;
+
+            const modal = new bootstrap.Modal(document.getElementById("imageModal"));
+            modal.show();
+        });
+    });
+});
+</script>
 
 
 
