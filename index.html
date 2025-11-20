@@ -479,6 +479,177 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
+<!-- Performance of Weakly Supervised Model Retrieval -->
+<section class="py-5" id="weakly-supervised-retrieval">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Performance of Weakly Supervised Model Retrieval</h2>
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10 col-xxl-9">
+                
+                <!-- 导航选项卡 -->
+                <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" 
+                                    data-bs-toggle="tab" 
+                                    data-bs-target="#retrieval-enhancement" 
+                                    type="button" 
+                                    role="tab">
+                                Retrieval Enhancement
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" 
+                                    data-bs-toggle="tab" 
+                                    data-bs-target="#generalization-unseen" 
+                                    type="button" 
+                                    role="tab">
+                                Generalization on Unseen Objects
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" 
+                                    data-bs-toggle="tab" 
+                                    data-bs-target="#ablation-wsr" 
+                                    type="button" 
+                                    role="tab">
+                                Ablation Results
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" 
+                                    data-bs-toggle="tab" 
+                                    data-bs-target="#dynamic-visualization" 
+                                    type="button" 
+                                    role="tab">
+                                Dynamic Visualization Results
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 内容面板 -->
+                <div class="tab-content">
+
+                    <!-- Retrieval Enhancement 面板 -->
+                    <div class="tab-pane fade show active" id="retrieval-enhancement" role="tabpanel">
+                        <div class="card border-0 shadow mb-4">
+                            <img src="B1_1.png" 
+                                 class="card-img-top clickable-image" 
+                                 data-full="B1_1.png"
+                                 alt="Retrieval Accuracy (%) of various methods">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Retrieval Accuracy (%) of various methods.
+                                </p>
+                                <p class="text-muted small mb-0">Click to view full-size image</p>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow">
+                            <img src="B1_2.png" 
+                                 class="card-img-top clickable-image" 
+                                 data-full="B1_2.png"
+                                 alt="t-SNE visualization of embedding space of CAD models">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    t-SNE visualization of embedding space of CAD models.
+                                </p>
+                                <p class="text-muted small mb-0">Click to view full-size image</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Generalization on Unseen Objects 面板 -->
+                    <div class="tab-pane fade" id="generalization-unseen" role="tabpanel">
+                        <div class="card border-0 shadow">
+                            <div class="card-body">
+
+                                <!-- 上：一张大图 -->
+                                <div class="mb-4">
+                                    <div class="img-container border rounded p-2">
+                                        <img src="B2_1.png" 
+                                             class="img-fluid rounded clickable-image" 
+                                             data-full="B2_1.png"
+                                             alt="Model retrieval capability on seen and unseen objects">
+                                        <div class="caption text-muted mt-2 small">
+                                            Model retrieval capability on seen and unseen objects.
+                                        </div>
+                                        <div class="text-muted small">Click to view full-size image</div>
+                                    </div>
+                                </div>
+
+                                <!-- 下：两张图左右排布 -->
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="img-container border rounded p-2">
+                                            <img src="B2_2.png" 
+                                                 class="img-fluid rounded clickable-image" 
+                                                 data-full="B2_2.png"
+                                                 alt="Qualitative results on some seen and unseen objects across multiple viewpoints">
+                                            <div class="caption text-muted mt-2 small">
+                                                Qualitative results on some seen and unseen objects across multiple viewpoints.
+                                            </div>
+                                            <div class="text-muted small">Click to view full-size image</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="img-container border rounded p-2">
+                                            <img src="B2_3.png" 
+                                                 class="img-fluid rounded clickable-image" 
+                                                 data-full="B2_3.png"
+                                                 alt="Qualitative results for unseen chair categories">
+                                            <div class="caption text-muted mt-2 small">
+                                                Qualitative results for unseen chair categories.
+                                            </div>
+                                            <div class="text-muted small">Click to view full-size image</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ablation Results 面板 -->
+                    <div class="tab-pane fade" id="ablation-wsr" role="tabpanel">
+                        <div class="card border-0 shadow">
+                            <img src="B3_1.png" 
+                                 class="card-img-top clickable-image" 
+                                 data-full="B3_1.png"
+                                 alt="Retrieval Accuracy (%) for various ablations">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Retrieval Accuracy (%) for various ablations.
+                                </p>
+                                <p class="text-muted small mb-0">Click to view full-size image</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Visualization Results 面板 -->
+                    <div class="tab-pane fade" id="dynamic-visualization" role="tabpanel">
+                        <div class="card border-0 shadow">
+                            <div class="card-body">
+                                <h5 class="card-title mb-3">Dynamic Visualization</h5>
+                                <div class="ratio ratio-16x9">
+                                    <video controls>
+                                        <source src="demo2_1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <p class="text-muted small mt-2 mb-0">
+                                    Dynamic Visualization of weakly supervised model retrieval process.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- /.tab-content -->
+            </div>
+        </div>
+    </div>
+</section>
 
     
 
