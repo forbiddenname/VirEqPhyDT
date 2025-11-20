@@ -691,7 +691,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="tab-pane fade show active" id="habitat-synthetic">
                         <div class="illustration-container bg-light rounded-4 p-4 shadow-lg mt-4 text-center">
                             <a href="B4_1.png" target="_blank">
-                                <img src="B4_1.png"
+                                <img src="B4_2.png"
                                      class="framework-img"
                                      alt="Different types of light sources and new CAD models">
                             </a>
@@ -705,10 +705,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     </div>
 
-                    <!-- Qualitative comparison -->
+                    <!-- Quantitative comparison -->
                     <div class="tab-pane fade" id="crossdomain-qualitative">
                         <div class="illustration-container bg-light rounded-4 p-4 shadow-lg mt-4 text-center">
-                            <a href="B4_2.png" target="_blank">
+                            <a href="B4_1.png" target="_blank">
                                 <img src="B4_2.png"
                                      class="framework-img"
                                      alt="Retrieval-Aware Alignment Accuracy on different datasets">
@@ -837,66 +837,81 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
    
-    <section class="py-5 bg-light" id="demo">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5">Video Demonstration</h2>
-            
-            <!-- 三视频横向布局 -->
-            <div class="row g-4 justify-content-center">
-                <!-- Part 1 -->
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card shadow-sm h-100">
-                        <div class="ratio ratio-16x9">
-                            <video controls poster="part1-poster.jpg" class="embed-responsive-item">
-                                <source src="demo_part1.webm" type="video/webm">
-                                <source src="demo_1.mp4" type="video/mp4">
+<!-- Case Study on Multi-Agent Restaurant Service -->
+<section class="py-5" id="restaurant-case-study">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-5">Case Study on Multi-Agent Restaurant Service</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-12 col-xl-10 col-xxl-9">
+
+                <!-- Tabs -->
+                <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
+                    <li class="nav-item">
+                        <button class="nav-link active"
+                                data-bs-toggle="tab"
+                                data-bs-target="#food-deliver">
+                            Food Deliver
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link"
+                                data-bs-toggle="tab"
+                                data-bs-target="#tray-return">
+                            Tray Return
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content">
+
+                    <!-- Food Deliver -->
+                    <div class="tab-pane fade show active" id="food-deliver">
+                        <div class="illustration-container bg-light rounded-4 p-4 shadow-lg mt-4 text-center">
+
+                            <video controls class="framework-img rounded">
+                                <source src="demo5_1.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Scene 1</h5>
-                            <p class="text-muted small mb-0">Duration: 0:32</p>
+
+                            <div class="fw-bold mt-3" style="font-size: 1.05rem;">
+                                Autonomous Navigation and Collaborative Delivery of Meals with Varying Sizes and Shapes
+                            </div>
+
+                            <div class="text-muted small mt-1">
+                                Video demonstration
+                            </div>
+
                         </div>
                     </div>
-                </div>
-    
-                <!-- Part 2 -->
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card shadow-sm h-100">
-                        <div class="ratio ratio-16x9">
-                            <video controls poster="part2-poster.jpg">
-                                <source src="demo_part2.webm" type="video/webm">
-                                <source src="demo_2.mp4" type="video/mp4">
+
+                    <!-- Tray Return -->
+                    <div class="tab-pane fade" id="tray-return">
+                        <div class="illustration-container bg-light rounded-4 p-4 shadow-lg mt-4 text-center">
+
+                            <video controls class="framework-img rounded">
+                                <source src="demo5_2.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title"> Scene 2</h5>
-                            <p class="text-muted small mb-0">Duration: 0:30</p>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Part 3 -->
-                <div class="col-12 col-md-6 col-lg-4 mb-4">
-                    <div class="card shadow-sm h-100">
-                        <div class="ratio ratio-16x9">
-                            <video controls poster="part3-poster.jpg">
-                                <source src="demo_part3.webm" type="video/webm">
-                                <source src="demo_3.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Scene 3</h5>
-                            <p class="text-muted small mb-0">Duration: 0:43</p>
+
+                            <div class="fw-bold mt-3" style="font-size: 1.05rem;">
+                                Collaborative Table Clearing
+                            </div>
+
+                            <div class="text-muted small mt-1">
+                                Video demonstration
+                            </div>
+
                         </div>
                     </div>
-                </div>
+
+                </div><!-- tab-content -->
             </div>
-    
         </div>
-    </section>
+    </div>
+</section>
+
 
 
     <!-- Footer -->
