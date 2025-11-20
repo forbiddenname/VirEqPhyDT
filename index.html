@@ -337,7 +337,7 @@
  <!-- Methodology -->
 <section class="py-5" id="methodology">
     <div class="container">
-        <h2 class="text-center fw-bold mb-5">Technical Approach</h2>
+        <h2 class="text-center fw-bold mb-5">Performance of Virtual Scene Updating</h2>
         <div class="row justify-content-center">
                 <div class="col-12 col-xl-10 col-xxl-9">  <!-- 增加列宽层级 -->
                 <!-- 导航选项卡 -->
@@ -345,52 +345,41 @@
                     <ul class="nav nav-pills justify-content-center mb-4" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" data-bs-toggle="tab" 
-                                    data-bs-target="#overview" type="button">
-                                Overview
+                                    data-bs-target="#Quantitative Comparison" type="button">
+                                Quantitative Comparison
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" data-bs-toggle="tab" 
-                                    data-bs-target="#llm" type="button">
-                                LLM Parsing
+                                    data-bs-target="#Qualitative comparison" type="button">
+                                Qualitative comparison
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" data-bs-toggle="tab" 
-                                    data-bs-target="#diffusion" type="button">
-                                Graph  Encoding
+                                    data-bs-target="#Ablation Results" type="button">
+                                Ablation Results
                             </button>
                         </li>
-
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" data-bs-toggle="tab" 
-                                    data-bs-target="#diffusion2" type="button">
-                                Diffusion Sharing
-                            </button>
-                        </li>
-
 
                     </ul>
                 </div>
 
                 <!-- 内容面板 -->
                 <div class="tab-content">
-                    <!-- Overview 面板 -->
+                    <!-- Quantitative Comparison 面板 -->
                     <div class="tab-pane fade show active" id="overview">
                         <div class="card border-0 shadow">
-                            <img src="pipeline2.png" class="card-img-top" alt="System Overview">
+                            <img src="A1.emf" class="card-img-top" alt="Quantitative Comparison">
                             <div class="card-body">
                                 <p class="card-text">
-                                    Three-stage pipeline:<br>
-                                    1. LLM-based scene graph generation<br>
-                                    2. Graph neural network encoding<br>
-                                    3. Conditional diffusion with node sharing
+                                    Retrieval-Aware Alignment Accuracy (%) and inference time (per image) on Scan2CAD-based dataset
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- LLM Parsing 面板 -->
+                    <!-- Qualitative comparison 面板 -->
 <div class="tab-pane fade" id="llm">
     <div class="card border-0 shadow">
         <div class="card-body">
@@ -398,66 +387,44 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="img-container border rounded p-2">
-                        <img src="prompt.png" 
+                        <img src="A2_1.emf" 
                              class="img-fluid rounded" 
                              alt="Prompt Engineering">
                         <div class="caption text-muted mt-2 small">
-                            Fig. 2a:  prompts design
+                            Qualitative results in scenarios with single and multiple objects
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="img-container border rounded p-2">
-                        <img src="prompts.png" 
+                        <img src="A2_2.emf" 
                              class="img-fluid rounded" 
                              alt="Parsing Process">
                         <div class="caption text-muted mt-2 small">
-                            Fig. 2b: Semantic parsing workflow
+                            Qualitative results in scenarios with partially occluded objects
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 代码示例 -->
-            <pre class="bg-light p-3 rounded mt-4"><code>{
-                     {"relationships": [
-                     [30, 117, 6, "standing on"],
-                     [6, 30, 1,"left"],
-                     [6, 30, 9,"symmetrical to"],
-                     ......
-                    ]}
-}</code></pre>
         </div>
     </div>
 </div>
 
 
-                    <!-- Graph Encoding 面板 -->   
+                    <!-- Ablation Results 面板 -->   
                     
                     <div class="tab-pane fade" id="diffusion">
                         <div class="card border-0 shadow">
-                            <img src="method_1.png" class="card-img-top" alt="Diffusion Process">
+                            <img src="A3.emf" class="card-img-top" alt="Diffusion Process">
                             <div class="card-body">
                                 <p class="card-text">
-                                    Graph encoding bridges human commonsense-driven symbolic reasoning (scene graphs generated by LLMs) with data-driven generative models (diffusion processes), achieving precise mapping of semantic constraints to physical space through topology-aware embedding representations.
+                                    Retrieval-Aware Alignment Accuracy (%) for various ablations. The underline value indicates the optimal result
                                 </p>
                             </div>
                         </div>
                     </div>     
 
-
-                    <!-- Diffusion 面板 -->
-                    <div class="tab-pane fade" id="diffusion2">
-                        <div class="card border-0 shadow">
-                            <img src="method2.png" class="card-img-top" alt="Diffusion Process">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Node-sharing mechanism maintains relationship consistency
-                                    through spatial constraint propagation during denoising.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
 
 
