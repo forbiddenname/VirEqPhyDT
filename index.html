@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</title>
+    <title>Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agent Systems</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         :root {
@@ -154,23 +154,8 @@
     <!-- <section class="hero-banner text-center">
         <div class="container position-relative" style="z-index: 1;">
             <h1 class="display-4 fw-bold mb-3">VirEqPhyDT</h1>
-            <p class="lead mb-4">Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</p>
+            <p class="lead mb-4">Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agent Systems</p>
 
-            <div class="author-list mb-4">
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <span>Xin Li<sup>1</sup></span>
-                    <span>Shiyuan Zhang<sup>1</sup></span>
-                    <span>Yanmin Zhou<sup>1,*</sup></span>
-                    <span>Ping Lu<sup>1,*</sup></span>
-                    <span>Zhipeng Wang<sup>1</sup></span>
-                    <span>Jiang Rong<sup>1</sup></span>
-                    <span>Hongrui Sang<sup>1</sup></span>                
-                    <span>He Bin<sup>1</sup></span>
-                </div>
-                <div class="affiliation mt-2">
-                    <sup>1</sup>Tongji University &nbsp;|&nbsp; <sup>*</sup>Corresponding Author
-                </div>
-            </div>
             <div class="d-flex justify-content-center gap-3">
                 <a href="#paper" class="btn btn-light btn-lg px-4">Paper</a>
                 <a href="#code" class="btn btn-outline-light btn-lg px-4">Code</a>
@@ -215,26 +200,8 @@
             <div class="container position-relative" style="z-index: 1;">
                 <!-- 强化主标题 -->
                 <h1 class="display-2 fw-bold mb-4">VirEqPhyDT</h1>
-                <p class="lead mb-4 fs-3">Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</p>
-        
-                <!-- 层级化作者信息 -->
-                <div class="author-list mb-5">
-                    <div class="d-flex flex-wrap justify-content-center gap-4">  <!-- 增加间距 -->       
-                        <span>Xin Li<sup>1</sup></span>
-                        <span>Shiyuan Zhang<sup>1</sup></span>
-                        <span>Yanmin Zhou<sup>1,*</sup></span>
-                        <span>Ping Lu<sup>1,*</sup></span>
-                        <span>Zhipeng Wang<sup>1</sup></span>
-                        <span>Jiang Rong<sup>1</sup></span>
-                        <span>Hongrui Sang<sup>1</sup></span>                
-                        <span>He Bin<sup>1</sup></span>
-                    </div>
-                    <div class="affiliation mt-3 fs-5">  <!-- 机构信息放大 -->
-                        <sup>1</sup>Tongji University &nbsp;|&nbsp; 
-                        <sup>*</sup>Corresponding Author: 
-                    </div>
-                </div>
-                
+                <p class="lead mb-4 fs-3">Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agent Systems</p>
+
                 <!-- 按钮组 -->
                 <div class="d-flex justify-content-center gap-3">
                     <a href="#paper" class="btn btn-light btn-lg px-4 py-2 rounded-pill">📄 Paper</a>
@@ -279,28 +246,10 @@
                   <div class="column is-four-fifths">
                    <div class="fs-5 lh-base" style="column-count: 1; column-gap: 2rem; text-align: justify; text-justify: inter-word;">
                    <p>
-                     Digital Twin (DT) technology, which enables real-time spatiotemporal mapping of physical objects, 
-                     offers a promising way to provide embodied agents with dynamic, reality-mirrored virtual learning environment. 
-                     However, most existing agent-DT systems either rely on heavy 3D point-cloud 
-                     reconstruction or on loosely coupled geometric-parameter synchronization, 
-                     making it difficult to efficiently maintain geometric dynamic equivalence between complex indoor scenes 
-                     and their virtual counterparts. 
+Digital Twin (DT) technology, which enables real-time spatiotemporal mapping of physical objects, offers a promising way to provide embodied agents with a dynamic, reality-mirrored virtual environment for downstream tasks. However, most existing agent-DT systems either rely on heavy 3D point-cloud reconstruction or on loosely coupled geometric-parameter synchronization, making it difficult to efficiently maintain geometric dynamic equivalence between complex indoor scenes and their virtual counterparts. This paper introduces VirEqPhy, a geometric dynamic equivalence method that formulates virtual-physical consistency as a voxel-based multi-task cascade that jointly performs CAD model retrieval and 9-DoF pose estimation from a single RGB image. VirEqPhy embeds observed objects and CAD models into a shared voxel feature space, couples a two-stage rotation estimation scheme with Procrustes-based refinement, and optionally integrates a weakly supervised Top-k retrieval module that learns object-CAD associations from multi-similarity labels without dense manual correspondences. Extensive experiments on supervised and weakly supervised benchmarks, as well as real-world robot scenarios, validate the effectiveness of VirEqPhy and demonstrate its superior overall performance over state-of-the-art methods.
                    </p>
-                   <p>
-                     This paper introduces VirEqPhy, a geometric dynamic equivalence method that formulates virtual-physical 
-                     consistency as a voxel-based multi-task cascade that jointly perform CAD model retrieval and 9-DoF pose estimation from 
-                     a single RGB image. VirEqPhy embeds observed objects and CAD models into a shared voxel feature space, couples 
-                     a two-stage rotation estimation scheme with Procrustes-based refinement, and optionally integrates a weakly 
-                     supervised Top-k retrieval module that learns object-CAD associations from multi-similarity labels 
-                     without dense manual correspondences. 
-                   </p>
-                   <p>
-                     In the supervised setting, VirEqPhy achieves 24.2% high-threshold mean AP for model retrieval and 24.4% 
-                     class-level alignment accuracy under the Scan2CAD criterion. In the weakly supervised setting, VirEqPhy 
-                     achieves 29.2% high-threshold mean AP and maintains strong performance on unseen categories. 
-                     In both settings, it surpasses representative baselines. A real-robot indoor navigation experiment further 
-                     verifies its effectiveness in dynamic real-world environments.
-                   </p>
+
+                
                 </div>
             </div>
                   
@@ -959,18 +908,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="row">
                 <div class="col-md-4">
                     <h5>VirEqPhy</h5>
-                    <p>Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agents Learning</p>
+                    <p>Geometric Dynamic Equivalence Method for Digital Twin-Driven Embodied Agent Systems</p>
                 </div>
-                <div class="col-md-4">
-                    <h5>Contact</h5>
-                    <ul class="list-unstyled">
-                        <li>Xin Li</li>
-                        <li>Shanghai Research Institute
-                            for Intelligent Autonomous Systems, Tongji University</li>
-                        <li>lixin314@foxmail.com</li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white">GitHub Repository</a></li>
