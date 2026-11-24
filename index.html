@@ -242,8 +242,7 @@
                   <div class="column is-four-fifths">
                    <div class="fs-5 lh-base" style="column-count: 1; column-gap: 2rem; text-align: justify; text-justify: inter-word;">
                    <p>
-Digital Twin (DT) technology, which enables real-time spatiotemporal mapping of physical objects, offers a promising way to provide embodied agents with a dynamic, reality-mirrored virtual environment for downstream tasks. However, most existing agent-DT systems either rely on heavy 3D point-cloud reconstruction or on loosely coupled geometric-parameter synchronization, making it difficult to efficiently maintain geometric dynamic equivalence between complex indoor scenes and their virtual counterparts. This paper introduces VirEqPhy, a geometric dynamic equivalence method that formulates virtual-physical consistency as a voxel-based multi-task cascade that jointly performs CAD model retrieval and 9-DoF pose estimation from a single RGB image. VirEqPhy embeds observed objects and CAD models into a shared voxel feature space, couples a two-stage rotation estimation scheme with Procrustes-based refinement, and optionally integrates a weakly supervised Top-k retrieval module that learns object-CAD associations from multi-similarity labels without dense manual correspondences. Extensive experiments on supervised and weakly supervised benchmarks, as well as real-world robot scenarios, validate the effectiveness of VirEqPhy and demonstrate its superior overall performance over state-of-the-art methods.
-                   </p>
+Digital twin (DT) technology, which enables real-time spatiotemporal mapping of physical objects, offers a promising way to provide embodied agents with dynamically updated virtual environments. However, existing methods for maintaining virtual–physical geometric consistency often require computationally intensive point-cloud reconstruction or face ambiguities in object–model matching under incomplete observations. This paper proposes VirEqPhy, a voxel-mediated geometric updating method that integrates CAD model retrieval and 9-DoF alignment from a single RGB image. Rather than relying solely on image-based descriptors, VirEqPhy employs a shared voxel representation to bridge observed objects and CAD geometry, combining category-level orientation priors with weighted Procrustes refinement for coarse-to-fine rotation estimation. Furthermore, a weakly supervised retrieval module learns graded object–CAD associations through appearance, semantic, and pretrained geometric similarities, and optimizes candidate rankings using a positive–negative Top-k objective without requiring additional one-to-one correspondence annotations. The estimated object-level geometric states are used to update virtual scenes from successive RGB observations. Experimental results demonstrate competitive retrieval and alignment performance, validate the effectiveness of the proposed methods, and confirm the feasibility of online geometric updating in real-world robotic systems.                   </p>
 
                 
                 </div>
@@ -260,8 +259,8 @@ Digital Twin (DT) technology, which enables real-time spatiotemporal mapping of 
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
                     <div class="feature-card p-3 h-100">
-                        <h5><span class="badge metric-badge me-2">2</span> Voxel-mediated cascade</h5>
-                        <p>Unified MI–MV–MR–MA for joint CAD retrieval and 9-DoF alignment</p>
+                        <h5><span class="badge metric-badge me-2">2</span> voxel-mediated CAD retrieval and alignment</h5>
+                        <p>Unified voxel-mediated CAD retrieval and coarse-to-fine 9-DoF alignment.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
